@@ -1,0 +1,3 @@
+set wsite=createobject("wscript.shell")
+website=inputbox("meu buscador","kibuscador")
+wsite.run"http://www.google.com/search?q="& website &""
