@@ -1,0 +1,216 @@
+@echo off
+title batch script
+cls
+:inicio
+set /p a=
+REM [---- CALCULADORA ----]
+if %a%==calculadora (goto a)
+if %a%==calc        (goto a)
+REM [---------------------]
+
+REM [---- BLOCO DE NOTAS ----]
+if %a%==notas    (goto b)
+if %a%==anotacao (goto b)
+if %a%==notepad  (goto b)
+REM [---------------------]
+
+REM [---- COR ----]
+if %a%==cor (goto c)
+REM [---------------------]
+
+REM [---- DESLIGAR PC ----]
+if %a%==desligar (goto d)
+if %a%==off      (goto d)
+REM [---------------------]
+
+REM [---- PROGRAMAS PRA FECHAR ----]
+if %a%==pf (goto e)
+REM [---------------------]
+
+REM [---- FECHAR ----]
+if %a%==close  (goto f)
+if %a%==fechar (goto f)
+REM [---------------------]
+
+REM [---- VARIAVEIS ----]
+if %a%==var       (goto g)
+if %a%==variaveis (goto g)
+REM [---------------------]
+
+REM [---- GAMES PSP ----]
+if %a%==gamespsp (goto h)
+if %a%==jogospsp (goto h)
+if %a%==psp      (goto h)
+REM [---------------------]
+
+REM [---- LOGOFF ----]
+if %a%==logoff (goto i)
+if %a%==l      (goto i)
+REM [---------------------]
+REM [---- INVISIVEL ----]
+if %a%==invisivel (goto j)
+if %a%==invi      (goto j)
+REM [---------------------]
+REM [---- TIRAR INVISIVEL ----]
+if %a%==tinvisivel (goto k)
+if %a%==tinvi      (goto k)
+REM [---------------------]
+REM [---- MSN ----]
+if %a%==msn (goto l)
+REM [---------------------]
+REM [---- VOLUME ----]
+if %a%==volume (goto m)
+if %a%==som    (goto m)
+REM [---------------------]
+REM [---- MAPA DE CARACTERES ----]
+if %a%==emoji (goto n)
+if %a%==EMOJI (goto n)
+REM [---------------------]
+REM [---- IEXPRESS ----]
+if %a%==IEXPRESS (goto o)
+if %a%==iexpress (goto o)
+REM [---------------------]
+REM [---- LUPA ----]
+if %a%==lupa (goto p)
+if %a%==LUPA (goto p)
+REM [---------------------]
+REM [---- TECLADO ----]
+if %a%==teclado (goto q)
+if %a%==osk     (goto q)
+REM [---------------------]
+REM [---- NOTAS COLORIDO ----]
+if %a%==post (goto r)
+if %a%==POST (goto r)
+REM [---------------------]
+REM [---- PAINT ----]
+if %a%==PAINT (goto s)
+if %a%==paint (goto s)
+REM [---------------------]
+REM [---- FIREFOX ----]
+if %a%==FOX (goto t)
+if %a%==fox (goto t)
+REM [---------------------]
+REM [---- CMD ----]
+if %a%==cmd (goto u)
+REM [---------------------]
+
+REM [INICIO DOS GOTO]
+:a
+start calc.exe
+cls
+goto inicio
+
+:b
+start notepad.exe
+cls
+goto inicio
+
+:c
+echo Digite a letra e o numero pra definir cor:
+set /p cor=
+color %cor%
+cls
+goto inicio
+
+:d
+echo Digite os segundos pra desligar o pc:
+set /p seg=
+shutdown -s -t %seg%
+pause
+cls
+goto inicio
+
+:e
+tasklist
+pause
+cls
+goto inicio
+
+:f
+echo Digite o nome do programa a ser fechado:
+set /p fechado=
+taskkill /f /im %fechado%
+goto inicio
+
+:g
+set
+pause
+cls
+goto inicio
+
+:h
+start chrome.exe "http://www.tudo-para-android.com/p/roms-para-o-psp.html"
+cls
+goto inicio
+
+:i
+logoff.exe
+cls
+goto inicio
+
+:j
+echo digite o programa pra ficar invisivel:
+set /p invi=
+attrib +h %invi%
+cls
+goto inicio
+
+:k
+echo digite o programa pra tirar invisivel:
+set /p tinvi=
+attrib -h %tinvi%
+cls
+goto inicio
+
+:l
+copy "%userprofile%\Desktop\msn.txt" "%userprofile%\Desktop\msn.bat"
+cls
+call msn.bat
+goto inicio
+
+:m
+SndVol.exe
+cls
+goto inicio
+
+:n
+charmap.exe
+cls
+goto inicio
+
+:o
+IEXPRESS.exe
+cls
+goto inicio
+
+:p
+MAGNIFY.exe
+cls
+goto inicio
+
+:q
+osk.exe
+cls
+goto inicio
+
+:r
+STIKYNOT.exe
+cls
+goto inicio
+
+:s
+mspaint.exe
+cls
+goto inicio
+
+:t
+start firefox.exe
+cls
+goto inicio
+
+:u
+start cmd.exe
+cls
+goto inicio
+
+REM [FIM DOS GOTO]
