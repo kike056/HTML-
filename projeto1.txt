@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> projeto 1 </title>
+<style type="text/css">
+body{background-color:silver;}
+
+.imagem1{
+	width:700px;
+	height:200px;
+	padding:0px;
+	box-shadow:0 0 10px gray;
+}
+
+#login{
+	border-radius:3px;
+}
+
+#senha{
+	border-radius:3px;
+}
+
+.botao1{
+	color:grey;
+	font-family:arial;
+	border-style:solid;
+	border-width:0px;
+	border-radius:0px;
+}
+
+.botao2{
+	font-family:italico;
+	border-radius:0px;
+}
+
+.botao3{
+	border-radius:0px;
+}
+
+.botao4{
+	border-radius:0px;
+}
+
+.botao5{
+	border-radius:0px;
+}
+
+textarea{
+	border-radius:5px;
+}
+</style>
+</head>
+
+<body>
+
+<h3>Leia as informações e prossiga: </h3>
+<img class="imagem1" src="https://img.ibxk.com.br/2017/07/13/13161229799251.jpg?w=1120&h=420&mode=crop&scale=both">
+<br>
+<p><b>Segundo parágrafo</b></p>
+<form>
+Digite seu login:
+<input type="text" id="login">
+Digite sua senha:
+<input type="password" id="senha" required>
+<input type="submit" class="botao1" value="ok">
+</form>
+<p>
+<a href="#"><button class="botao2">cadastrar no site </button></a>
+<br>
+<form>
+Escreva seu feedback:
+<p>
+<textarea rows="10" cols="60">
+</textarea>
+<p>
+<input type="submit" class="botao3" value="Enviar">
+<input type="reset" class="botao4" value="Limpar dados">
+<input type="button" class="botao5" value="Verificar email">
+</form>
+</body>
+
+</html>
